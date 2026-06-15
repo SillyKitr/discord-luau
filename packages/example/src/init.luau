@@ -11,10 +11,12 @@ local discordBot = discordLuau.bot.new({
 	token = env.DISCORD_BOT_TOKEN,
 	intents = discordBuilders.intents.new({ "Guilds", "GuildMessages" }):build(),
 	reconnect = true,
-	logLevel = "Warn",
+	logLevel = "Debug",
 })
 
 discordBot.onAllShardsReady:listenOnce(function()
+	print("Bot is ready!")
+
 	local channel = discordBot:getVoiceChannelAsync("1266808027668021268"):await():unwrapOk()
 
 	channel.onAudioFrame:listen(function(object)
