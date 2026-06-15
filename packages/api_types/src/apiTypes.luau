@@ -1321,6 +1321,7 @@ export type MessageSnapshotObject = {
 export type MessageObject = {
 	id: Snowflake?, -- id of the message
 	channel_id: Snowflake?, -- id of the channel the message was sent in
+	guild_id: Snowflake?, -- the id of the guild (may be missing for some channel objects received over gateway guild dispatches)
 	author: UserObject?, -- the author of this message (not guaranteed to be a valid user, see below)
 	content: string?, -- contents of the message
 	timestamp: string?, -- when this message was sent
