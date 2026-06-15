@@ -147,7 +147,10 @@ function Request.Prototype.executeAsync<Resolve>(self: Request)
 		local baseUrl = `https://discord.com/api/v{self.restApiVersion}{self.url}`
 
 		headerTable["user-agent"] = "DiscordBot (https://github.com/DiscordLuau/discord-luau, 0.1.0)"
-		headerTable["content-type"] = "application/json"
+
+		if self.body ~= nil then
+			headerTable["content-type"] = "application/json"
+		end
 
 		if stdPolyfills.runtime.capabilities().forbidCustomUserAgent then
 			headerTable["user-agent"] = nil
