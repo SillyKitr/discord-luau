@@ -23,7 +23,7 @@ function stdio.prompt(message: string?): string
 	elseif target == "Eryx" then
 		return require("./eryx/stdio").prompt(message)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/stdio").prompt(message)
 	end
 
 	error(`Out of reach`)
@@ -46,7 +46,7 @@ function stdio.write(source: string)
 	elseif target == "Eryx" then
 		return require("./eryx/stdio").write(source)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/stdio").write(source)
 	end
 
 	error(`Out of reach`)

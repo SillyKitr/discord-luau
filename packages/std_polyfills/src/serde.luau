@@ -23,7 +23,7 @@ function serde.encode(format: EncodeDecodeFormat, value: any, pretty: boolean?):
 	elseif target == "Eryx" then
 		return require("./eryx/serde").encode(format, value, pretty)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/serde").encode(format, value, pretty)
 	end
 
 	error(`Out of reach`)
@@ -46,7 +46,7 @@ function serde.decode(format: EncodeDecodeFormat, encoded: buffer | string): any
 	elseif target == "Eryx" then
 		return require("./eryx/serde").decode(format, encoded)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/serde").decode(format, encoded)
 	end
 
 	error(`Out of reach`)
@@ -69,7 +69,7 @@ function serde.decompress(format: CompressDecompressFormat, s: buffer | string):
 	elseif target == "Eryx" then
 		return require("./eryx/serde").decompress(format, s)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/serde").decompress(format, s)
 	end
 
 	error(`Out of reach`)
@@ -92,7 +92,7 @@ function serde.compress(format: CompressDecompressFormat, s: buffer | string, le
 	elseif target == "Eryx" then
 		return require("./eryx/serde").compress(format, s, level)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/serde").compress(format, s, level)
 	end
 
 	error(`Out of reach`)

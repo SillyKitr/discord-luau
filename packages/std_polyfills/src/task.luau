@@ -23,7 +23,7 @@ function task.cancel(thread: thread)
 	elseif target == "Eryx" then
 		return require("./eryx/task").cancel(thread)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/task").cancel(thread)
 	end
 
 	error(`Out of reach`)
@@ -46,7 +46,7 @@ function task.defer<T...>(functionOrThread: thread | (T...) -> ...any, ...: any)
 	elseif target == "Eryx" then
 		return require("./eryx/task").defer(functionOrThread, ...)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/task").defer(functionOrThread, ...)
 	end
 
 	error(`Out of reach`)
@@ -69,7 +69,7 @@ function task.delay<T...>(duration: number, functionOrThread: thread | (T...) ->
 	elseif target == "Eryx" then
 		return require("./eryx/task").delay(duration, functionOrThread, ...)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/task").delay(duration, functionOrThread, ...)
 	end
 
 	error(`Out of reach`)
@@ -95,7 +95,7 @@ function task.spawn<T...>(functionOrThread: thread | (T...) -> ...any, ...: any)
 	elseif target == "Eryx" then
 		return require("./eryx/task").spawn(functionOrThread, ...)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/task").spawn(functionOrThread, ...)
 	end
 
 	error(`Out of reach`)
@@ -121,7 +121,7 @@ function task.wait(duration: number?): number
 	elseif target == "Eryx" then
 		return require("./eryx/task").wait(duration)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/task").wait(duration)
 	end
 
 	error(`Out of reach`)

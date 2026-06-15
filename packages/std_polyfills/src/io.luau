@@ -19,7 +19,7 @@ io.terminal = {
 		elseif target == "Roblox" then
 			error(`io is not available on Roblox`)
 		elseif target == "Lute" then
-			error(`Discord-Luau does not currently support the Lute runtime`)
+			return require("./lute/io").terminal.enableRawMode()
 		end
 
 		error(`Out of reach`)
@@ -36,7 +36,7 @@ io.terminal = {
 		elseif target == "Roblox" then
 			error(`io is not available on Roblox`)
 		elseif target == "Lute" then
-			error(`Discord-Luau does not currently support the Lute runtime`)
+			return require("./lute/io").terminal.restoreMode()
 		end
 
 		error(`Out of reach`)
@@ -53,7 +53,7 @@ io.terminal = {
 		elseif target == "Roblox" then
 			error(`io is not available on Roblox`)
 		elseif target == "Lute" then
-			error(`Discord-Luau does not currently support the Lute runtime`)
+			return require("./lute/io").terminal.getSize()
 		end
 
 		error(`Out of reach`)
@@ -77,7 +77,7 @@ function io.stdoutWrite(data: string)
 	elseif target == "Roblox" then
 		error(`io is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/io").stdoutWrite(data)
 	end
 
 	error(`Out of reach`)
@@ -100,7 +100,7 @@ function io.stderrWrite(data: string)
 	elseif target == "Roblox" then
 		error(`io is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/io").stderrWrite(data)
 	end
 
 	error(`Out of reach`)
@@ -123,7 +123,7 @@ function io.stdinRead(amount: number?): string
 	elseif target == "Roblox" then
 		error(`io is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/io").stdinRead(amount)
 	end
 
 	error(`Out of reach`)

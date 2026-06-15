@@ -23,7 +23,7 @@ function net.urlEncode(url: string, binary: boolean?): string
 	elseif target == "Eryx" then
 		return require("./eryx/net").urlEncode(url, binary)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/net").urlEncode(url, binary)
 	end
 
 	error(`Out of reach`)
@@ -45,11 +45,11 @@ function net.request(config: string | FetchParams): FetchResponse
 	elseif target == "Zune" then
 		return require("./zune/net").request(config :: any)
 	elseif target == "Roblox" then
-		return require("./roblox/net").request(config :: any)
+		return require("./roblox/net").request(config :: any) :: any
 	elseif target == "Eryx" then
 		return require("./eryx/net").request(config :: any)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/net").request(config :: any)
 	end
 
 	error(`Out of reach`)
@@ -75,7 +75,7 @@ function net.tcpSocket(url: string): WebSocket
 	elseif target == "Eryx" then
 		return require("./eryx/net").socket(url) :: any
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/net").socket(url) :: any
 	end
 
 	error(`Out of reach`)
@@ -101,7 +101,7 @@ function net.udpSocket(host: string, port: number): UdpSocket
 	elseif target == "Eryx" then
 		error(`UDP sockets are not available via this polyfill on Eryx`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`UDP sockets are not available on Lute`)
 	end
 
 	error(`Out of reach`)

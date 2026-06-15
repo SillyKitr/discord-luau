@@ -32,7 +32,7 @@ function ffi.getTypes(): _zune_ffi_types
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -55,7 +55,7 @@ function ffi.getNull(): FFIPointer
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -79,7 +79,7 @@ function ffi.getPrefix(): string
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -103,7 +103,7 @@ function ffi.getSuffix(): string
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -137,7 +137,7 @@ function ffi.dlopen(path: string, functions: { [string]: FFIFunctionDefinition }
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -168,7 +168,7 @@ function ffi.struct(fields: { { [string]: FFIAnyDataType } }): FFIStructureType
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -201,7 +201,7 @@ function ffi.closure(definition: FFIFunctionDefinition, handler: (...any) -> any
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -225,7 +225,7 @@ function ffi.fn(definition: FFIFunctionDefinition, srcPtr: FFIPointer): (...any)
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -250,7 +250,7 @@ function ffi.alloc(size: number, alignment: number?): FFIPointer
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -274,7 +274,7 @@ function ffi.create(dataType: FFIAnyDataType): FFIPointer
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -297,7 +297,7 @@ function ffi.free(src: FFIPointer): ()
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -321,7 +321,7 @@ function ffi.dupe(src: buffer | FFIPointer | vector): FFIPointer
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -344,7 +344,7 @@ function ffi.ptr(src: FFIPointer): FFIPointer
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -368,7 +368,7 @@ function ffi.ptrFromAddress(src: buffer): FFIPointer
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -392,7 +392,7 @@ function ffi.tagName(tag: number): string?
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)
@@ -417,7 +417,7 @@ function ffi.getLuaState(mainthread: boolean?): FFIPointer
 	elseif target == "Roblox" then
 		error(`FFI is not available on Roblox`)
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		error(`FFI is not available on the Lute runtime`)
 	end
 
 	error(`Out of reach`)

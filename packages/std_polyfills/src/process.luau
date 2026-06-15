@@ -23,7 +23,7 @@ function process.getPlatform(): OS
 	elseif target == "Eryx" then
 		return require("./eryx/process").os :: OS
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/process").os :: OS
 	end
 
 	error(`Out of reach`)
@@ -46,7 +46,7 @@ function process.getArgs(): { string }
 	elseif target == "Eryx" then
 		return require("./eryx/process").args :: { string }
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/process").args :: { string }
 	end
 
 	error(`Out of reach`)
@@ -69,7 +69,7 @@ function process.getEnv(): { [string]: string }
 	elseif target == "Eryx" then
 		return require("./eryx/process").env :: { [string]: string }
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/process").env :: { [string]: string }
 	end
 
 	error(`Out of reach`)
@@ -92,7 +92,7 @@ function process.getCwd(): string
 	elseif target == "Eryx" then
 		return require("./eryx/process").cwd :: string
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/process").cwd() :: string
 	end
 
 	error(`Out of reach`)
@@ -116,7 +116,7 @@ function process.run(exec: string, args: { string }?, opts: { cwd: string?, env:
 	elseif target == "Eryx" then
 		return require("./eryx/process").run(exec, args, opts) :: RunResult
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/process").run(exec, args, opts) :: RunResult
 	end
 
 	error(`Out of reach`)
@@ -139,7 +139,7 @@ function process.getArch(): Arch
 	elseif target == "Eryx" then
 		return require("./eryx/process").arch :: Arch
 	elseif target == "Lute" then
-		error(`Discord-Luau does not currently support the Lute runtime`)
+		return require("./lute/process").arch :: Arch
 	end
 
 	error(`Out of reach`)
@@ -156,7 +156,12 @@ function process.onSignal(signal: Signal, callback: () -> ())
 		return
 	end
 
-	require("./zune/process").onSignal(signal, callback)
+	local target = runtime.assertRuntime()
+	if target == "Zune" then
+		require("./zune/process").onSignal(signal, callback)
+	elseif target == "Lute" then
+		require("./lute/process").onSignal(signal, callback)
+	end
 end
 
 export type Signal = "INT"
