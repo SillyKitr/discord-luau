@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/DiscordLuau/docs/master/src/assets/vector.svg" alt="discord-luau" width="96" />
 </p>
 
-A diagnostic tool for discord-luau. Run it to collect environment and package information when reporting issues — paste the output in your bug report or support request.
+A diagnostic tool for discord-luau. Run it to collect environment and package information when reporting issues - paste the output in your bug report or support request.
 
 **Source:** [packages/debuggify](https://github.com/DiscordLuau/discord-luau/tree/main/packages/debuggify)
 

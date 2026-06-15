@@ -21,7 +21,7 @@ end
 local function buildLogHeader(diagnosticsInfo: diagnostics.DiagnosticsInfo, script: string, runtime: string): string
 	local lines = {
 		rule(),
-		"  discord-luau debuggify — capture log",
+		"  discord-luau debuggify - capture log",
 		rule(),
 		logField("started", os.date("!%Y-%m-%d %H:%M:%S UTC") :: string),
 		logField("script", script),
@@ -154,7 +154,7 @@ return command
 
 		StdPolyfills.fileSystem.writeFile(logPath, content)
 
-		print(`\n  [debuggify] process exited — log saved to {logPath}`)
+		print(`\n  [debuggify] process exited - log saved to {logPath}`)
 	end)
 	:addArgument({
 		name = "runtime",
