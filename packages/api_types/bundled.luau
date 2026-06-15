@@ -2048,6 +2048,7 @@ type MessageSnapshotObject__DARKLUA_TYPE_cs = {
 type MessageObject__DARKLUA_TYPE_ct = {
 	id: Snowflake__DARKLUA_TYPE_X?,
 	channel_id: Snowflake__DARKLUA_TYPE_X?,
+	guild_id: Snowflake__DARKLUA_TYPE_X?,
 	author: UserObject__DARKLUA_TYPE_a5?,
 	content: string?,
 	timestamp: string?,
