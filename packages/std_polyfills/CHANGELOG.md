@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## 0.0.3
+
+### Added
+
+- Lute runtime support: full polyfill implementation across all modules (`task`, `process`, `net`, `fileSystem`, `datetime`, `stdio`, `io`, `serde`)
+- Lute runtime detection via `pcall(require, "@lute/fs")` probe - Lute does not override `_VERSION` so it cannot be identified by version string alone
+- All dispatch layers now route to Lute implementations instead of erroring with an unsupported-runtime message
+- `process.onSignal` dispatch extended to support Lute alongside Zune
+- Lute `serde.decode` sanitizes JSON null - Lute's JSON parser returns a userdata singleton for null values and encodes null-type flag fields (e.g. `"premium_subscriber": null`) as `{[null_userdata] = true}` entries; both forms are now recursively converted to Lua `nil`
+- Lute `net.request` builds query parameters directly into the URL, as Lute's native HTTP client ignores the `query` field in the opts table
+- Lute `fileSystem.stat` returns `{kind = "none"}` for missing paths instead of throwing
+
+### Fixed
+
+- Lute `onSignal` capability corrected to `true` - signal handling is available via `@std/process`
+- Zune `ffi` capability corrected to `false`
+- `task.defer`, `task.delay`, and `task.spawn` variadic argument type widened from `T...` to `any` to resolve type errors at call sites
+
 ## 0.0.2
 
 ### Fixed
