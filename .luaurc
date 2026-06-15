@@ -5,6 +5,8 @@
 	},
 	"aliases": {
 		"lune": ".lune/typedefs/",
-		"eryx": ".eryx/typedefs/"
+		"eryx": ".eryx/typedefs/",
+		"std": ".lute/typedefs/std/",
+		"lute": ".lute/typedefs/lute/"
 	}
 }
