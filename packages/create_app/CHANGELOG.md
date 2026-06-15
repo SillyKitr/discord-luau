@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Lute added as a valid runtime option in the project creation wizard
+- Scaffolded `rokit.toml` now includes `luau-lang/lute@^1.0.0` for Lute projects
+- Generated `.luaurc` now includes `@lute` and `@std` typedef path aliases for Lute LSP support
+
 ## 0.0.4
 
 ### Fixed
