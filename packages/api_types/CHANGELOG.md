@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## 0.0.4
+
+### Added
+
+- Added `guild_id` attribute to message object in ApiTypes, this was missing in initial implementation.
+
 ## 0.0.3
 
 ### Changed
