@@ -98,4 +98,4 @@ for index, name in publishable do
 	print(`[done] {name}`)
 end
 
-print(`\ndone — published {#publishable} package(s)`)
+print(`\ndone - published {#publishable} package(s)`)
