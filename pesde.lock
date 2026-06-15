@@ -32,6 +32,9 @@ luau = "packages/create_app"
 [workspace."discord_luau/dave"]
 luau = "packages/dave"
 
+[workspace."discord_luau/debuggify"]
+luau = "packages/debugify"
+
 [workspace."discord_luau/discord_luau"]
 luau = "packages/discord_luau"
 

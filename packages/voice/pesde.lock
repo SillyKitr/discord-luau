@@ -13,32 +13,34 @@ index_url = "https://github.com/pesde-pkg/index"
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."discord_luau/api_types@0.0.2 luau"]
+[graph."discord_luau/api_types@0.0.4 luau"]
 direct = ["api_types", { name = "discord_luau/api_types", version = ">=0.0.0", index = "default" }, "standard"]
 
-[graph."discord_luau/api_types@0.0.2 luau".dependencies]
+[graph."discord_luau/api_types@0.0.4 luau".dependencies]
 bit = ["discord_luau/bit@0.0.2 luau", "standard"]
+int64 = ["4x8matrix/int64@1.0.1 luau", "standard"]
 util = ["discord_luau/util@0.0.2 luau", "standard"]
 
-[graph."discord_luau/api_types@0.0.2 luau".pkg_ref]
+[graph."discord_luau/api_types@0.0.4 luau".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."discord_luau/api_types@0.0.2 luau".pkg_ref.dependencies]
-bit = [{ name = "discord_luau/bit", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
-util = [{ name = "discord_luau/util", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
+[graph."discord_luau/api_types@0.0.4 luau".pkg_ref.dependencies]
+bit = [{ name = "discord_luau/bit", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
+int64 = [{ name = "4x8matrix/int64", version = "^1.0.1", index = "https://github.com/pesde-pkg/index" }, "standard"]
+util = [{ name = "discord_luau/util", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 
-[graph."discord_luau/binary@0.0.2 luau".dependencies]
+[graph."discord_luau/binary@0.0.5 luau".dependencies]
 sha256 = ["kimpure/sha256@0.1.1 luau", "standard"]
-std_polyfills = ["discord_luau/std_polyfills@0.0.2 luau", "standard"]
+std_polyfills = ["discord_luau/std_polyfills@0.0.3 luau", "standard"]
 
-[graph."discord_luau/binary@0.0.2 luau".pkg_ref]
+[graph."discord_luau/binary@0.0.5 luau".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."discord_luau/binary@0.0.2 luau".pkg_ref.dependencies]
+[graph."discord_luau/binary@0.0.5 luau".pkg_ref.dependencies]
 sha256 = [{ name = "kimpure/sha256", version = "^0.1.1", index = "https://github.com/pesde-pkg/index" }, "standard"]
-std_polyfills = [{ name = "discord_luau/std_polyfills", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
+std_polyfills = [{ name = "discord_luau/std_polyfills", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 
 [graph."discord_luau/bit@0.0.2 luau".dependencies]
 int64 = ["4x8matrix/int64@1.0.1 luau", "standard"]
@@ -50,63 +52,63 @@ index_url = "https://github.com/pesde-pkg/index"
 [graph."discord_luau/bit@0.0.2 luau".pkg_ref.dependencies]
 int64 = [{ name = "4x8matrix/int64", version = "^1.0.1", index = "https://github.com/pesde-pkg/index" }, "standard"]
 
-[graph."discord_luau/dave@0.0.2 luau"]
+[graph."discord_luau/dave@0.0.3 luau"]
 direct = ["dave", { name = "discord_luau/dave", version = ">=0.0.0", index = "default" }, "standard"]
 
-[graph."discord_luau/dave@0.0.2 luau".dependencies]
-binary = ["discord_luau/binary@0.0.2 luau", "standard"]
-logger = ["discord_luau/logger@0.0.2 luau", "standard"]
-std_polyfills = ["discord_luau/std_polyfills@0.0.2 luau", "standard"]
+[graph."discord_luau/dave@0.0.3 luau".dependencies]
+binary = ["discord_luau/binary@0.0.5 luau", "standard"]
+logger = ["discord_luau/logger@0.0.4 luau", "standard"]
+std_polyfills = ["discord_luau/std_polyfills@0.0.3 luau", "standard"]
 
-[graph."discord_luau/dave@0.0.2 luau".pkg_ref]
+[graph."discord_luau/dave@0.0.3 luau".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."discord_luau/dave@0.0.2 luau".pkg_ref.dependencies]
-binary = [{ name = "discord_luau/binary", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
-logger = [{ name = "discord_luau/logger", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
-std_polyfills = [{ name = "discord_luau/std_polyfills", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
+[graph."discord_luau/dave@0.0.3 luau".pkg_ref.dependencies]
+binary = [{ name = "discord_luau/binary", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
+logger = [{ name = "discord_luau/logger", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
+std_polyfills = [{ name = "discord_luau/std_polyfills", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 
-[graph."discord_luau/emitter@0.0.2 luau"]
+[graph."discord_luau/emitter@0.0.3 luau"]
 direct = ["emitter", { name = "discord_luau/emitter", version = ">=0.0.0", index = "default" }, "standard"]
 
-[graph."discord_luau/emitter@0.0.2 luau".dependencies]
-logger = ["discord_luau/logger@0.0.2 luau", "standard"]
+[graph."discord_luau/emitter@0.0.3 luau".dependencies]
+logger = ["discord_luau/logger@0.0.4 luau", "standard"]
 
-[graph."discord_luau/emitter@0.0.2 luau".pkg_ref]
+[graph."discord_luau/emitter@0.0.3 luau".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."discord_luau/emitter@0.0.2 luau".pkg_ref.dependencies]
-logger = [{ name = "discord_luau/logger", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
+[graph."discord_luau/emitter@0.0.3 luau".pkg_ref.dependencies]
+logger = [{ name = "discord_luau/logger", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 
-[graph."discord_luau/logger@0.0.2 luau"]
+[graph."discord_luau/logger@0.0.4 luau"]
 direct = ["logger", { name = "discord_luau/logger", version = ">=0.0.0", index = "default" }, "standard"]
 
-[graph."discord_luau/logger@0.0.2 luau".dependencies]
-std_polyfills = ["discord_luau/std_polyfills@0.0.2 luau", "standard"]
+[graph."discord_luau/logger@0.0.4 luau".dependencies]
+std_polyfills = ["discord_luau/std_polyfills@0.0.3 luau", "standard"]
 
-[graph."discord_luau/logger@0.0.2 luau".pkg_ref]
+[graph."discord_luau/logger@0.0.4 luau".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."discord_luau/logger@0.0.2 luau".pkg_ref.dependencies]
-std_polyfills = [{ name = "discord_luau/std_polyfills", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
+[graph."discord_luau/logger@0.0.4 luau".pkg_ref.dependencies]
+std_polyfills = [{ name = "discord_luau/std_polyfills", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 
-[graph."discord_luau/opus@0.0.2 luau"]
+[graph."discord_luau/opus@0.0.3 luau"]
 direct = ["opus", { name = "discord_luau/opus", version = ">=0.0.0", index = "default" }, "standard"]
 
-[graph."discord_luau/opus@0.0.2 luau".dependencies]
-binary = ["discord_luau/binary@0.0.2 luau", "standard"]
-std_polyfills = ["discord_luau/std_polyfills@0.0.2 luau", "standard"]
+[graph."discord_luau/opus@0.0.3 luau".dependencies]
+binary = ["discord_luau/binary@0.0.5 luau", "standard"]
+std_polyfills = ["discord_luau/std_polyfills@0.0.3 luau", "standard"]
 
-[graph."discord_luau/opus@0.0.2 luau".pkg_ref]
+[graph."discord_luau/opus@0.0.3 luau".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."discord_luau/opus@0.0.2 luau".pkg_ref.dependencies]
-binary = [{ name = "discord_luau/binary", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
-std_polyfills = [{ name = "discord_luau/std_polyfills", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
+[graph."discord_luau/opus@0.0.3 luau".pkg_ref.dependencies]
+binary = [{ name = "discord_luau/binary", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
+std_polyfills = [{ name = "discord_luau/std_polyfills", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 
 [graph."discord_luau/secret@0.0.2 luau"]
 direct = ["secret", { name = "discord_luau/secret", version = ">=0.0.0", index = "default" }, "standard"]
@@ -115,25 +117,25 @@ direct = ["secret", { name = "discord_luau/secret", version = ">=0.0.0", index =
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."discord_luau/sodium@0.0.3 luau"]
+[graph."discord_luau/sodium@0.0.4 luau"]
 direct = ["sodium", { name = "discord_luau/sodium", version = ">=0.0.0", index = "default" }, "standard"]
 
-[graph."discord_luau/sodium@0.0.3 luau".dependencies]
-binary = ["discord_luau/binary@0.0.2 luau", "standard"]
-std_polyfills = ["discord_luau/std_polyfills@0.0.2 luau", "standard"]
+[graph."discord_luau/sodium@0.0.4 luau".dependencies]
+binary = ["discord_luau/binary@0.0.5 luau", "standard"]
+std_polyfills = ["discord_luau/std_polyfills@0.0.3 luau", "standard"]
 
-[graph."discord_luau/sodium@0.0.3 luau".pkg_ref]
+[graph."discord_luau/sodium@0.0.4 luau".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."discord_luau/sodium@0.0.3 luau".pkg_ref.dependencies]
-binary = [{ name = "discord_luau/binary", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
-std_polyfills = [{ name = "discord_luau/std_polyfills", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
+[graph."discord_luau/sodium@0.0.4 luau".pkg_ref.dependencies]
+binary = [{ name = "discord_luau/binary", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
+std_polyfills = [{ name = "discord_luau/std_polyfills", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 
-[graph."discord_luau/std_polyfills@0.0.2 luau"]
+[graph."discord_luau/std_polyfills@0.0.3 luau"]
 direct = ["std_polyfills", { name = "discord_luau/std_polyfills", version = ">=0.0.0", index = "default" }, "standard"]
 
-[graph."discord_luau/std_polyfills@0.0.2 luau".pkg_ref]
+[graph."discord_luau/std_polyfills@0.0.3 luau".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
@@ -144,32 +146,32 @@ direct = ["util", { name = "discord_luau/util", version = ">=0.0.0", index = "de
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."discord_luau/websocket@0.0.2 luau"]
+[graph."discord_luau/websocket@0.0.3 luau"]
 direct = ["websocket", { name = "discord_luau/websocket", version = ">=0.0.0", index = "default" }, "standard"]
 
-[graph."discord_luau/websocket@0.0.2 luau".dependencies]
+[graph."discord_luau/websocket@0.0.3 luau".dependencies]
 accumulator = ["discord_luau/accumulator@0.0.2 luau", "standard"]
-api_types = ["discord_luau/api_types@0.0.2 luau", "standard"]
-emitter = ["discord_luau/emitter@0.0.2 luau", "standard"]
+api_types = ["discord_luau/api_types@0.0.4 luau", "standard"]
+emitter = ["discord_luau/emitter@0.0.3 luau", "standard"]
 future = ["yetanotherclown/luau_futures@2.0.0-beta.3 luau", "standard"]
-logger = ["discord_luau/logger@0.0.2 luau", "standard"]
+logger = ["discord_luau/logger@0.0.4 luau", "standard"]
 secret = ["discord_luau/secret@0.0.2 luau", "standard"]
-std_polyfills = ["discord_luau/std_polyfills@0.0.2 luau", "standard"]
+std_polyfills = ["discord_luau/std_polyfills@0.0.3 luau", "standard"]
 util = ["discord_luau/util@0.0.2 luau", "standard"]
 
-[graph."discord_luau/websocket@0.0.2 luau".pkg_ref]
+[graph."discord_luau/websocket@0.0.3 luau".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."discord_luau/websocket@0.0.2 luau".pkg_ref.dependencies]
-accumulator = [{ name = "discord_luau/accumulator", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
-api_types = [{ name = "discord_luau/api_types", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
-emitter = [{ name = "discord_luau/emitter", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
+[graph."discord_luau/websocket@0.0.3 luau".pkg_ref.dependencies]
+accumulator = [{ name = "discord_luau/accumulator", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
+api_types = [{ name = "discord_luau/api_types", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
+emitter = [{ name = "discord_luau/emitter", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 future = [{ name = "yetanotherclown/luau_futures", version = "^2.0.0-beta.3", index = "https://github.com/pesde-pkg/index" }, "standard"]
-logger = [{ name = "discord_luau/logger", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
-secret = [{ name = "discord_luau/secret", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
-std_polyfills = [{ name = "discord_luau/std_polyfills", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
-util = [{ name = "discord_luau/util", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
+logger = [{ name = "discord_luau/logger", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
+secret = [{ name = "discord_luau/secret", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
+std_polyfills = [{ name = "discord_luau/std_polyfills", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
+util = [{ name = "discord_luau/util", version = ">=0.0.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 
 [graph."kimpure/sha256@0.1.1 luau".pkg_ref]
 ref_ty = "pesde"

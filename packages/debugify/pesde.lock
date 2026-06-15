@@ -2,7 +2,7 @@
 # It is not intended for manual editing.
 format = 2
 name = "discord_luau/debuggify"
-version = "0.0.1"
+version = "0.0.3"
 target = "luau"
 
 [graph."4x8matrix/cli_builder@0.1.0-dev.1 luau"]
@@ -15,9 +15,9 @@ index_url = "https://github.com/pesde-pkg/index"
 [graph."4x8matrix/cli_builder@0.1.0-dev.1 luau".pkg_ref.dependencies]
 frktest = [{ name = "itsfrank/frktest", version = "^0.0.2", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
 
-[graph."discord_luau/std_polyfills@0.0.2 luau"]
+[graph."discord_luau/std_polyfills@0.0.3 luau"]
 direct = ["std_polyfills", { name = "discord_luau/std_polyfills", version = ">=0.0.0", index = "default" }, "standard"]
 
-[graph."discord_luau/std_polyfills@0.0.2 luau".pkg_ref]
+[graph."discord_luau/std_polyfills@0.0.3 luau".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"

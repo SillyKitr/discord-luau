@@ -2,8 +2,11 @@
 # It is not intended for manual editing.
 format = 2
 name = "discord_luau/api_types"
-version = "0.0.3"
+version = "0.0.4"
 target = "luau"
+
+[graph."4x8matrix/int64@1.0.1 luau"]
+direct = ["int64", { name = "4x8matrix/int64", version = "^1.0.1", index = "default" }, "standard"]
 
 [graph."4x8matrix/int64@1.0.1 luau".pkg_ref]
 ref_ty = "pesde"
