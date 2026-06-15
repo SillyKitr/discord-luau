@@ -20,9 +20,15 @@ function runtime.getRuntime(): RuntimeValue
 		-- selene: allow(undefined_variable)
 		if game and workspace then
 			return "Roblox"
-		else
-			return "Luau"
 		end
+		-- Lute does not override _VERSION, so it stays "Luau". Probe for its exclusive module alias.
+		local luteOk = pcall(require, "@lute/fs")
+
+		if luteOk then
+			return "Lute"
+		end
+
+		return "Luau"
 	else
 		if string.match(version, LUNE_STRING_MATCH) then
 			return "Lune"
@@ -30,8 +36,6 @@ function runtime.getRuntime(): RuntimeValue
 			return "Zune"
 		elseif string.match(version, ERYX_STRING_MATCH) then
 			return "Eryx"
-		elseif select(1, require, "@lute/net/client") then
-			return "Lute"
 		end
 	end
 
@@ -105,7 +109,7 @@ function runtime.capabilities(): Capabilities
 		return {
 			ffi = false,
 			udp = false,
-			onSignal = false,
+			onSignal = true,
 			compress = false,
 			forbidCustomUserAgent = false,
 		}
