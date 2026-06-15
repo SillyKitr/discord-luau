@@ -23,7 +23,7 @@ local MIN_WIDTH = 80
 local MIN_HEIGHT = 17
 
 local VALID_IDES = { vscode = true, nvim = true, zed = true }
-local VALID_RUNTIMES = { zune = true, lune = true }
+local VALID_RUNTIMES = { zune = true, lune = true, lute = true }
 
 type Information = {
 	ProjectName: string,
@@ -83,7 +83,7 @@ local FIELDS: { Field } = {
 	{
 		key = "Runtime",
 		label = "Runtime",
-		question = "Which Luau runtime will you be using?  (zune / lune)",
+		question = "Which Luau runtime will you be using?  (zune / lune / lute)",
 		mask = nil,
 		placeholder = "zune",
 		default = "zune",
@@ -92,7 +92,7 @@ local FIELDS: { Field } = {
 		end,
 		validate = function(value)
 			if not VALID_RUNTIMES[value] then
-				return "Invalid runtime. Expected one of: zune, lune"
+				return "Invalid runtime. Expected one of: zune, lune, lute"
 			end
 			return nil
 		end,

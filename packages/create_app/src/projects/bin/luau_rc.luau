@@ -3,6 +3,7 @@ local StdPolyfills = require("../../../luau_packages/std_polyfills")
 local RUNTIME_ALIASES = {
 	lune = { lune = "~/.lune/.typedefs/0.10.1/" },
 	zune = { zune = "~/.zune/typedefs/" },
+	lute = { lute = "~/.lute/typedefs/lute/", std = "~/.lute/typedefs/std/" },
 }
 
 return function(runtime: string)

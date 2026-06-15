@@ -3,6 +3,7 @@ local StdPolyfills = require("../../../luau_packages/std_polyfills")
 local RUNTIME_TOOLS = {
 	zune = "Scythe-Technology/zune@0.5.6",
 	lune = "lune-org/lune@0.10.4",
+	lute = "luau-lang/lute@^1.0.0",
 }
 
 return function(runtime: string)
